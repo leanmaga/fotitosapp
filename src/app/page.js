@@ -1,9 +1,9 @@
 import { connectDB } from "@/libs/mongodb";
-import user from "@/models/user";
+import User from "@/models/user";
 
 async function loadUsers() {
   await connectDB();
-  const users = await user.find();
+  const users = await User.find();
   return users;
 }
 async function HomePage() {
